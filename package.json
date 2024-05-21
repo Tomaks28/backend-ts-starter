@@ -2,9 +2,27 @@
   "name": "backend-ts-starter",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "tsc": "tsc --noEmit",
+    "build": "tsc && tsc-alias",
+    "start": "yarn build && node dist/server.js",
+    "dev": "nodemon src/server.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "tsc-alias": "^1.8.10",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
 }
